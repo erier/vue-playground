@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Foobar</title>
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css" media="all" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-parent">
+                    <div class="tile is-child box">
+                        <h2 class="title">Random Cat</h2>
+                        <div id="app">
+                            <img v-bind:src="catImgUrl" style="max-width: 500px;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <div id="nubmer">
+                            <input v-model="num" placeholder="edit me">
+                            <button v-on:click="getFact">Get the Fact</button>
+                            {{num}}<br>
+                            <span v-if="isLoading">loading</span>
+                            {{numResponse}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="js/scripts.vue.js"></script>
+</body>
+</html>
