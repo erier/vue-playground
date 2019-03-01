@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Foobar</title>
+</head>
+<body>
+    <h1>Foobar</h1>
+    <div id="app">
+
+        <img v-bind:src="catImgUrl" style="max-width: 500px;" />
+    </div>
+
+    <div id="chuck">
+        {{icon_url}}
+        <img v-bind:src="icon_url" />
+        {{fact}}
+    </div>
+
+    <div id="nubmer">
+        <input v-model="num" placeholder="edit me">
+        <button v-on:click="getFact">Get the Fact</button>
+        {{num}}<br>
+        <span v-if="isLoading">loading</span>
+        {{numResponse}}
+    </div>
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="js/scripts.vue.js"></script>
+</body>
+</html>
